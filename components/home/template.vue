@@ -5,13 +5,13 @@
       <span>LOGO.</span>
     </div>
     <div class="wrapper__title">
-      <span >Lorem ipsum at dolor met.</span>
+      <span>Lorem ipsum at dolor met.</span>
       <h1>Trindart studio</h1>
     </div>
     <div class="wrapper--action">
-      <div class="wrapper--action__button">
-        <span> Começar ↪ </span>
-      </div>
+      <NuxtLink to="about" class="wrapper--action__button">
+        <span> Começar <img src="/icons/double-chevron-icon.svg" alt="Entrar" /> </span>
+      </NuxtLink>
     </div>
   </section>
 </template>
@@ -50,7 +50,6 @@
 
     h1 {
       font-size: 8em;
-      color: white;
       font-weight: 800;
       transition: 0.3s ease-in-out;
 
@@ -60,33 +59,51 @@
     }
   }
   &--action {
-    padding: $t-s-2;
+    padding: $t-s-2 $t-s-2 $t-s-4;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 
     &__button {
+      text-decoration: none;
       cursor: pointer;
-      display: block;
       width: auto;
       width: 150px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: $t-s-1;
-      background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
-      border-radius: 15px;
-      animation: move 6s infinite;
+      padding: 0.5rem $t-s-1;
+      // background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+      border-radius: 50px;
+      // animation: move 6s infinite;
       position: relative;
+      border: 3px solid transparent;
+      transition: 0.4s ease-in-out;
+      color: #ffffff;
 
       &:hover {
         outline: 0;
+        border: 3px solid white;
+        background: white;
+        color: black;
+
+        span {
+          img {
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(62deg)
+              brightness(103%) contrast(102%);
+          }
+        }
       }
 
       span {
         font-size: 1.1em;
         font-weight: 600;
+
+        display: flex;
+        align-items: center;
+        gap: 0.1rem;
+        img {
+          width: 25%;
+          animation: shake 2s infinite;
+        }
       }
     }
 
@@ -103,6 +120,22 @@
       100% {
         top: 0px;
       }
+    }
+
+    @keyframes shake {
+      0% {
+        transform: translateX(0px);
+      }
+      50% {
+        transform: translateX(5px);
+      }
+      100% {
+        transform: translateX(0px);
+      }
+    }
+
+    @media (max-width: 750px) {
+      padding: $t-s-2 $t-s-1 $t-s-4;
     }
   }
 }
