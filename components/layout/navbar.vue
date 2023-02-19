@@ -90,7 +90,7 @@ const showOrHideAppBar = () => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: $t-s-1;
+  padding: $t-s-1 $t-s-3;
   z-index: 99999;
   &__logo {
     a {
@@ -162,8 +162,6 @@ const showOrHideAppBar = () => {
       }
     }
   }
-
-
 }
 
 .sticky {
