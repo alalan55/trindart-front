@@ -49,6 +49,10 @@
           maiores, ut iusto.
         </p>
       </div>
+
+      <div class="wrapper__content__modalities">
+        <AboutModalities />
+      </div>
     </section>
   </div>
 </template>
@@ -66,8 +70,11 @@
     &__title {
       text-align: center;
       margin-bottom: 3rem;
-      font-size: 2em;
-      font-weight: 700;
+
+      h1 {
+        font-size: 2em;
+        font-weight: 700;
+      }
     }
     &__descriptions {
       p {
@@ -85,6 +92,13 @@
           letter-spacing: 0;
           // line-height: 20px;
         }
+      }
+    }
+
+    & > div {
+      // border: 1px solid red;
+      &:not(:last-child) {
+        margin-bottom: $t-s-3;
       }
     }
   }
