@@ -1,6 +1,8 @@
 <template>
   <div class="wrapper">
-    <h1>Layout base</h1>
+    <div class="wrapper__nav">
+      <LayoutNavbar />
+    </div>
     <div class="wrapper__content">
       <slot />
     </div>
@@ -11,4 +13,18 @@
 export default {};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import "@/assets/main.scss";
+
+.wrapper {
+  &__nav {
+    height: $t-nav-bar;
+  }
+  &__content {
+    border: 5px solid;
+    // background: red;
+    // height: calc(300vh - $t-nav-bar);
+    height: calc(200vh - $t-nav-bar);
+  }
+}
+</style>
