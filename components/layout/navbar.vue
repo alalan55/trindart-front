@@ -51,19 +51,37 @@ window.addEventListener("scroll", () => {
 onClickOutside(list, (e) => (list.value.style.left = "-100%"));
 
 const showOrHideAppBar = () => {
+  console.log(list.value.style.left);
+
+  // list.value.style.left == "0px" ? list.value.style.left = "-100%" : ''
+  // list.value.style.left == "-100%" ? list.value.style.left = "0px" : ''
+
   if (list.value.style.left == "0px") {
     list.value.style.left = "-100%";
-    needShow.value = false;
-  } else {
-    list.value.style.left = "0";
-    needShow.value = true;
+    // return;
   }
+  if (list.value.style.left == "-100%") {
+    console.log("hello");
+    list.value.style.left = "0px";
+    // return;
+  }
+
+  console.log(list.value.style.left);
+
+  // if(list.value.style.left == "-100%"){
+  //   list.value.style.left = "0px";
+  //   console.log(list.value.style.left)
+  // }else{
+  //   // console.log('ouu')
+  //   list.value.style.left = "-100%";
+  // }
 };
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/main.scss";
 .nav {
+  border: 1px solid transparent;
   position: fixed;
   top: 0;
   width: 100%;
@@ -84,7 +102,6 @@ const showOrHideAppBar = () => {
 
   &__links {
     ul {
-      position: relative;
       display: flex;
       align-items: center;
       gap: $t-s-1;
@@ -92,7 +109,6 @@ const showOrHideAppBar = () => {
 
       li {
         list-style: none;
-        position: relative;
         a {
           text-decoration: none;
           transition: 0.6s;
@@ -146,6 +162,8 @@ const showOrHideAppBar = () => {
       }
     }
   }
+
+
 }
 
 .sticky {

@@ -3,4 +3,7 @@ export default defineNuxtConfig({
   ssr: false,
   css: ["@/assets/main.scss", "animate.css/animate.min.css"],
   modules: ["@vueuse/nuxt"],
+  // app: {
+  //   pageTransition: { name: "page", mode: "out-in" },
+  // },
 });
