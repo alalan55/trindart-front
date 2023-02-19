@@ -18,13 +18,11 @@ export default {};
 
 .wrapper {
   &__nav {
-    height: $t-nav-bar;
+    // height: $t-nav-bar; BOTANDO ESSE VALOR, PASSO AS INFORMAÇÕES PARA O TAMANHO DA BARRA DE NAVEGAÇÃO
   }
   &__content {
-    border: 5px solid;
     // background: red;
     // height: calc(300vh - $t-nav-bar);
-    height: calc(200vh - $t-nav-bar);
   }
 }
 </style>

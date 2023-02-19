@@ -5,17 +5,24 @@
     </div>
 
     <div class="nav__links">
-      <ul>
+      <ul ref="list">
         <li v-for="item in links" :key="item.name">
           <NuxtLink :to="item.to">{{ item.name }}</NuxtLink>
         </li>
       </ul>
+
+      <figure @click="showOrHideAppBar()">
+        <img src="/icons/menu-icon.svg" alt="Menu" />
+      </figure>
     </div>
   </nav>
 </template>
 
 <script setup>
 const nav = ref(null);
+const list = ref(null);
+const needShow = ref(false);
+
 const links = [
   {
     name: "Home",
@@ -23,7 +30,7 @@ const links = [
   },
   {
     name: "Sobre",
-    to: "/",
+    to: "/about",
   },
   {
     name: "Contatos",
@@ -38,6 +45,20 @@ const links = [
 window.addEventListener("scroll", () => {
   nav.value.classList.toggle("sticky", window.scrollY > 5);
 });
+
+const showOrHideAppBar = () => {
+  if (list.value.style.left == "0px") {
+    list.value.style.left = "-100%";
+    needShow.value = false;
+  } else {
+    list.value.style.left = "0";
+    needShow.value = true;
+  }
+
+  // list.value.style.left == "0px"
+  //   ? (list.value.style.left = "-100%")
+  //   : (list.value.style.left = "0");
+};
 </script>
 
 <style lang="scss" scoped>
@@ -57,6 +78,7 @@ window.addEventListener("scroll", () => {
     a {
       text-decoration: none;
       font-weight: 800;
+      color: #ffffff;
     }
   }
 
@@ -66,6 +88,7 @@ window.addEventListener("scroll", () => {
       display: flex;
       align-items: center;
       gap: $t-s-1;
+      transition: 0.6s;
 
       li {
         list-style: none;
@@ -74,13 +97,53 @@ window.addEventListener("scroll", () => {
           text-decoration: none;
           transition: 0.6s;
           font-weight: 600;
+          color: #ffffff;
         }
+        .router-link-exact-active {
+          border-bottom: 1px solid $t-blue-2;
+        }
+      }
+    }
+
+    figure {
+      display: none;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    @media (max-width: 750px) {
+      ul {
+        position: fixed;
+        background: white;
+        top: 0;
+        left: -100%;
+        bottom: 0;
+        width: 75%;
+        flex-direction: column;
+        justify-content: center;
+        gap: $t-s-3;
+
+        li {
+          a {
+            font-size: 2em;
+            color: $t-blue-2;
+          }
+        }
+      }
+      figure {
+        display: block;
       }
     }
   }
 }
 
 .sticky {
-  background: red;
+  background: $t-blue-1;
 }
 </style>
