@@ -2,4 +2,5 @@
 export default defineNuxtConfig({
   ssr: false,
   css: ["@/assets/main.scss", "animate.css/animate.min.css"],
+  modules: ["@vueuse/nuxt"],
 });

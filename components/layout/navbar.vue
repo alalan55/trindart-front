@@ -19,6 +19,8 @@
 </template>
 
 <script setup>
+import { onClickOutside } from "@vueuse/core";
+
 const nav = ref(null);
 const list = ref(null);
 const needShow = ref(false);
@@ -46,6 +48,8 @@ window.addEventListener("scroll", () => {
   nav.value.classList.toggle("sticky", window.scrollY > 5);
 });
 
+onClickOutside(list, (e) => (list.value.style.left = "-100%"));
+
 const showOrHideAppBar = () => {
   if (list.value.style.left == "0px") {
     list.value.style.left = "-100%";
@@ -54,10 +58,6 @@ const showOrHideAppBar = () => {
     list.value.style.left = "0";
     needShow.value = true;
   }
-
-  // list.value.style.left == "0px"
-  //   ? (list.value.style.left = "-100%")
-  //   : (list.value.style.left = "0");
 };
 </script>
 
@@ -133,6 +133,11 @@ const showOrHideAppBar = () => {
           a {
             font-size: 2em;
             color: $t-blue-2;
+          }
+          .router-link-exact-active {
+            color: $t-blue-3 !important;
+            border-bottom: none;
+            font-weight: 700;
           }
         }
       }
