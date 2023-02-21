@@ -17,6 +17,7 @@
     "animate.css": "^4.1.1",
     "node-sass": "^8.0.0",
     "sass": "^1.58.2",
-    "sass-loader": "^13.2.0"
+    "sass-loader": "^13.2.0",
+    "vue-page-transition": "^0.2.2"
   }
 }
