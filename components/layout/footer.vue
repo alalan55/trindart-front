@@ -1,6 +1,8 @@
 <template>
   <footer>
-    <span> Trindart Studio &copy; 2023 | made by <a href="" target="_blank">Alan</a> </span>
+    <span>
+      Trindart Studio &copy; 2023 | made by <a href="" target="_blank">Alan</a>
+    </span>
   </footer>
 </template>
 
@@ -10,11 +12,15 @@
 @import "@/assets/main.scss";
 
 footer {
+  height: $t-footer;
   background: $t-blue-1;
   border: 1px solid;
-  padding: $t-s-2 $t-s-2;
+  padding: $t-s-2;
   text-align: center;
   color: #ffffff;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 
   span {
     font-weight: 500;
