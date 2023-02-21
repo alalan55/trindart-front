@@ -2,12 +2,18 @@
 <template>
   <section class="wrapper">
     <div class="wrapper__logo">
-      <span>LOGO.</span>
+      <figure>
+          <img src="/images/logo.png" alt="Logo" />
+        </figure> 
     </div>
+
+
     <div class="wrapper__title">
       <span>Lorem ipsum at dolor met.</span>
       <h1>Trindart Studio</h1>
     </div>
+
+
     <div class="wrapper--action">
       <NuxtLink to="about" class="wrapper--action__button">
         <span> Começar <img src="/icons/double-chevron-icon.svg" alt="Entrar" /> </span>
@@ -31,14 +37,20 @@
   color: #ffffff;
 
   &__logo {
-    height: 70px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: $t-s-1;
-    span {
-      font-weight: 900;
-    }
+      height: 70px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: $t-s-1;
+      figure {
+        width: 53px;
+        height: 53px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
   }
   &__title {
     text-align: center;
