@@ -26,7 +26,7 @@
 @import "@/assets/main.scss";
 .wrapper {
   height: 100vh;
-  background: url("images/cover-bg.jpg") no-repeat;
+  background: url("/images/cover-bg.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
