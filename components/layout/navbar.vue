@@ -41,7 +41,7 @@ const links = [
   },
   {
     name: "Contatos",
-    to: "/",
+    to: "/contacts",
   },
   {
     name: "Galeria",
