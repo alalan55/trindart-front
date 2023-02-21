@@ -1,7 +1,12 @@
 <template>
   <nav class="nav" ref="nav">
     <div class="nav__logo">
-      <NuxtLink to="/">LOGO.</NuxtLink>
+      <!-- <NuxtLink to="/">LOGO.</NuxtLink> -->
+      <NuxtLink to="/">
+        <figure>
+          <img src="/images/logo.png" alt="Logo" />
+        </figure>
+      </NuxtLink>
     </div>
 
     <div class="nav__links">
@@ -40,6 +45,10 @@ const links = [
   },
   {
     name: "Galeria",
+    to: "/",
+  },
+  {
+    name: "Eventos",
     to: "/",
   },
 ];
@@ -97,6 +106,16 @@ const showOrHideAppBar = () => {
       text-decoration: none;
       font-weight: 800;
       color: #ffffff;
+
+      figure {
+        width: 53px;
+        height: 53px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
     }
   }
 

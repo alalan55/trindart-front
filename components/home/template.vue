@@ -6,7 +6,7 @@
     </div>
     <div class="wrapper__title">
       <span>Lorem ipsum at dolor met.</span>
-      <h1>Trindart studio</h1>
+      <h1>Trindart Studio</h1>
     </div>
     <div class="wrapper--action">
       <NuxtLink to="about" class="wrapper--action__button">
@@ -75,7 +75,7 @@
       border-radius: 50px;
       // animation: move 6s infinite;
       position: relative;
-      border: 3px solid transparent;
+      border: 3px solid ;
       transition: 0.4s ease-in-out;
       color: #ffffff;
 
