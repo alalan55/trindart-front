@@ -1,12 +1,15 @@
 <script setup>
+const props = defineProps({
+  info:{type: String, required: true, default: 'Título'}
+})
 const showInfo = ref(false);
 </script>
 
 <template>
-  <div class="accordion">
+  <div class="accordion" v-auto-animate>
     <div class="accordion__header" @click="showInfo = !showInfo">
       <div class="left">
-        <h1>Mangá</h1>
+        <h1>{{props.info}}</h1>
       </div>
       <div class="right">
         <figure>

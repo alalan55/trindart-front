@@ -21,7 +21,7 @@
     </div>
 
     <div class="modalities__content">
-      <SharedAccordion v-for="item in 5" :key="item" />
+      <SharedAccordion v-for="item in ['Mangá', 'Quadrinhos', 'Arte Digital', 'Comics', 'Realismo', 'Ilustração']" :key="item" :info="item" />
     </div>
   </div>
 </template>
