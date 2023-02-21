@@ -47,7 +47,7 @@
       </div>
 
       <div class="wrapper__content__units">
-        <AboutUnits/>
+        <AboutUnits />
       </div>
     </section>
   </div>
@@ -56,13 +56,11 @@
 <style lang="scss" scoped>
 @import "@/assets/main.scss";
 .wrapper {
-  background: $t-blue-1;
   color: #ffffff;
 
-  @include pageStyle();
-
   &__content {
-    // background: $t-blue-1;
+    background: $t-blue-1;
+    @include pageStyle();
     &__title {
       text-align: center;
       margin-bottom: $t-s-3;

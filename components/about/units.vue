@@ -14,9 +14,13 @@
     </div>
 
     <div class="units__content">
-      <div class="units__content__item">
+      <div
+        v-for="item in ['Petrópolis', 'Itaipava']"
+        :key="item"
+        class="units__content__item"
+      >
         <div class="units__content__item__title">
-          <h2>Petrópolis</h2>
+          <h2>{{ item }}</h2>
         </div>
         <figure>
           <img src="/images/localidade.jpg" alt="Localidade" />
@@ -25,23 +29,7 @@
         <div class="units__content__item__description">
           <span>
             <img src="/icons/pin-icon.svg" alt="Pin" /> Rua lourenço dias, n° 60, RJ,
-            Petrópolis
-          </span>
-        </div>
-      </div>
-
-      <div class="units__content__item">
-        <div class="units__content__item__title">
-          <h2>Petrópolis</h2>
-        </div>
-        <figure>
-          <img src="/images/localidade.jpg" alt="Localidade" />
-        </figure>
-
-        <div class="units__content__item__description">
-          <span>
-            <img src="/icons/pin-icon.svg" alt="Pin" /> Rua lourenço dias, n° 60, RJ,
-            Petrópolis
+            {{ item }}
           </span>
         </div>
       </div>

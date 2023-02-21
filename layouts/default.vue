@@ -6,6 +6,9 @@
     <div class="wrapper__content">
       <slot />
     </div>
+    <div class="wrapper__footer">
+      <LayoutFooter/>
+    </div>
   </div>
 </template>
 
