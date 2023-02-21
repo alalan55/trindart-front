@@ -108,12 +108,16 @@ const showOrHideAppBar = () => {
       color: #ffffff;
 
       figure {
-        width: 53px;
-        height: 53px;
+        width: 49px;
+        height: 49px;
         img {
           width: 100%;
           height: 100%;
           object-fit: contain;
+        }
+        @media (max-width: 750px) {
+          width: 40px;
+          height: 40px;
         }
       }
     }
@@ -180,6 +184,10 @@ const showOrHideAppBar = () => {
         display: block;
       }
     }
+  }
+
+  @media (max-width: 750px) {
+    padding: $t-s-1;
   }
 }
 

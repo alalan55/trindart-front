@@ -41,6 +41,14 @@
       <div class="wrapper__content__modalities">
         <AboutModalities />
       </div>
+
+      <div class="wrapper__content__squad">
+        <AboutSquad />
+      </div>
+
+      <div class="wrapper__content__units">
+        <AboutUnits />
+      </div>
     </section>
   </div>
 </template>
@@ -48,21 +56,23 @@
 <style lang="scss" scoped>
 @import "@/assets/main.scss";
 .wrapper {
-  // min-height: 100vh;
-  background: $t-blue-1;
   color: #ffffff;
 
-  @include pageStyle();
-
   &__content {
+    background: $t-blue-1;
+    @include pageStyle();
     &__title {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: $t-s-3;
 
       h1 {
         font-size: 4em;
         font-weight: 700;
         transition: 0.4s ease-in-out;
+
+        @media (max-width: 850px) {
+          font-size: 2em !important;
+        }
       }
     }
     &__descriptions {
@@ -88,8 +98,7 @@
         }
       }
 
-
-      &__infos{
+      &__infos {
         margin: $t-s-5 0 0;
 
         display: flex;
@@ -98,14 +107,14 @@
         gap: $t-s-2;
         flex-wrap: wrap;
 
-        &>div{
+        & > div {
           flex: 0 1 350px;
           display: flex;
           flex-direction: column;
           gap: $t-s-1;
           text-align: center;
 
-          span{
+          span {
             font-weight: 700;
             font-size: 1.5em;
             text-transform: uppercase;
@@ -117,11 +126,14 @@
 
     &__modalities {
       background: white;
-      padding: 2rem;
+      padding: $t-s-2;
+    }
+    &__units {
+      background: white;
+      padding: $t-s-2;
     }
 
     & > div {
-      // border: 3px solid red;
       &:not(:last-child) {
         margin-bottom: $t-s-3;
       }
@@ -129,6 +141,7 @@
 
     @media (max-width: 750px) {
       &__title {
+        margin-bottom: $t-s-2;
         h1 {
           font-size: 2.5em;
         }
