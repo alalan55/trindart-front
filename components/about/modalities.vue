@@ -79,7 +79,6 @@
 
       @media (max-width: 750px) {
         letter-spacing: 0;
-        // line-height: 20px;
       }
     }
   }

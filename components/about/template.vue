@@ -45,6 +45,10 @@
       <div class="wrapper__content__squad">
         <AboutSquad />
       </div>
+
+      <div class="wrapper__content__units">
+        <AboutUnits/>
+      </div>
     </section>
   </div>
 </template>
@@ -52,14 +56,13 @@
 <style lang="scss" scoped>
 @import "@/assets/main.scss";
 .wrapper {
-  // min-height: 100vh;
   background: $t-blue-1;
-  // background: red;
   color: #ffffff;
 
   @include pageStyle();
 
   &__content {
+    // background: $t-blue-1;
     &__title {
       text-align: center;
       margin-bottom: $t-s-3;
@@ -125,11 +128,14 @@
 
     &__modalities {
       background: white;
-      padding: 2rem;
+      padding: $t-s-2;
+    }
+    &__units {
+      background: white;
+      padding: $t-s-2;
     }
 
     & > div {
-      // border: 3px solid red;
       &:not(:last-child) {
         margin-bottom: $t-s-3;
       }
