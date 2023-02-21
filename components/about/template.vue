@@ -41,6 +41,10 @@
       <div class="wrapper__content__modalities">
         <AboutModalities />
       </div>
+
+      <div class="wrapper__content__squad">
+        <AboutSquad />
+      </div>
     </section>
   </div>
 </template>
@@ -50,6 +54,7 @@
 .wrapper {
   // min-height: 100vh;
   background: $t-blue-1;
+  // background: red;
   color: #ffffff;
 
   @include pageStyle();
@@ -57,12 +62,16 @@
   &__content {
     &__title {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: $t-s-3;
 
       h1 {
         font-size: 4em;
         font-weight: 700;
         transition: 0.4s ease-in-out;
+
+        @media (max-width: 850px) {
+          font-size: 2em !important;
+        }
       }
     }
     &__descriptions {
@@ -88,8 +97,7 @@
         }
       }
 
-
-      &__infos{
+      &__infos {
         margin: $t-s-5 0 0;
 
         display: flex;
@@ -98,14 +106,14 @@
         gap: $t-s-2;
         flex-wrap: wrap;
 
-        &>div{
+        & > div {
           flex: 0 1 350px;
           display: flex;
           flex-direction: column;
           gap: $t-s-1;
           text-align: center;
 
-          span{
+          span {
             font-weight: 700;
             font-size: 1.5em;
             text-transform: uppercase;
@@ -129,6 +137,7 @@
 
     @media (max-width: 750px) {
       &__title {
+        margin-bottom: $t-s-2;
         h1 {
           font-size: 2.5em;
         }

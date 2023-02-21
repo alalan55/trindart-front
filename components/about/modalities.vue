@@ -21,14 +21,23 @@
     </div>
 
     <div class="modalities__content">
-      <SharedAccordion v-for="item in ['Mangá', 'Quadrinhos', 'Arte Digital', 'Comics', 'Realismo', 'Ilustração']" :key="item" :info="item" />
+      <SharedAccordion
+        v-for="item in [
+          'Mangá',
+          'Quadrinhos',
+          'Arte Digital',
+          'Comics',
+          'Realismo',
+          'Ilustração',
+        ]"
+        :key="item"
+        :info="item"
+      />
     </div>
   </div>
 </template>
 
-<script>
-export default {};
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 @import "@/assets/main.scss";
@@ -39,7 +48,7 @@ export default {};
   margin: 0 auto;
   &__title {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: $t-s-3;
 
     h2 {
       font-size: 3em;
@@ -51,7 +60,7 @@ export default {};
   &__descriptions {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: $t-s-2;
   }
   &__descriptions {
     position: relative;
@@ -65,7 +74,7 @@ export default {};
       font-weight: 400;
 
       &:not(:last-child) {
-        margin-bottom: 1rem;
+        margin-bottom: $t-s-1;
       }
 
       @media (max-width: 750px) {
