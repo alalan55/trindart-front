@@ -49,7 +49,7 @@ const links = [
   },
   {
     name: "Eventos",
-    to: "/",
+    to: "/events",
   },
 ];
 
