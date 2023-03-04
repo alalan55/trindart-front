@@ -40,6 +40,14 @@
         </div>
       </div>
     </div>
+
+    <!-- <div class="wrapper--action">
+      <div class="wrapper--action__button">
+        <span>
+          Voltar <img src="/icons/double-chevron-left-icon.svg" alt="Voltar" />
+        </span>
+      </div>
+    </div> -->
   </div>
 </template>
 
@@ -68,6 +76,7 @@ const informations = [
 
 .wrapper {
   color: $t-blue-1;
+  position: relative;
   &__hero {
     background: $t-blue-2;
     height: 60vh;
@@ -153,5 +162,95 @@ const informations = [
       }
     }
   }
+
+//   &--action {
+//     // border: 2px solid;
+//     position: fixed;
+//     bottom: 10%;
+//     right: 5%;
+//     // padding: $t-s-2 $t-s-2 $t-s-4;
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-end;
+
+
+//     &__button {
+//       cursor: pointer;
+//       width: auto;
+//       width: 120px;
+//       padding: 0.5rem $t-s-1;
+//       border-radius: 50px;
+//       position: relative;
+//       border: 3px solid;
+//       transition: 0.4s ease-in-out;
+//       color: black;
+
+//       span {
+//         img {
+//           filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(62deg) brightness(103%)
+//             contrast(102%);
+//         }
+//       }
+
+//       &:hover {
+//         outline: 0;
+//         border: 3px solid white;
+//         background: black;
+//         color: white;
+
+//         span {
+//           img {
+//             filter: invert(0%) sepia(0%) saturate(7490%) hue-rotate(99deg)
+//               brightness(101%) contrast(101%);
+//           }
+//         }
+//       }
+
+//       span {
+//         font-size: 1.1em;
+//         font-weight: 600;
+
+//         display: flex;
+//         align-items: center;
+//         gap: 0.1rem;
+//         img {
+//           width: 25%;
+//           animation: shake 2s infinite;
+//         }
+//       }
+//     }
+
+//     @keyframes move {
+//       0% {
+//         top: 0px;
+//       }
+//       25% {
+//         top: 20px;
+//       }
+//       // 75% {
+//       //   top: 20px;
+//       // }
+//       100% {
+//         top: 0px;
+//       }
+//     }
+
+//     @keyframes shake {
+//       0% {
+//         transform: translateX(0px);
+//       }
+//       50% {
+//         transform: translateX(5px);
+//       }
+//       100% {
+//         transform: translateX(0px);
+//       }
+//     }
+
+//     @media (max-width: 750px) {
+//       padding: $t-s-2 $t-s-1 $t-s-4;
+//     }
+//   }
 }
 </style>
