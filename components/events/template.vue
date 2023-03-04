@@ -13,9 +13,10 @@
 
     <div class="events__list">
       <div
-        v-for="item in ['Evento 1', 'Evento 2', 'Evento 3', 'Evento 4']"
+        v-for="(item, i) in ['Evento 1', 'Evento 2', 'Evento 3', 'Evento 4']"
         :key="item"
         class="events__list__item"
+        @click="$router.push(`/events/${i}`)"
       >
         <div>
           <div class="header">
@@ -88,6 +89,7 @@
     margin: 0 auto;
 
     &__item {
+      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: space-between;
